@@ -31,8 +31,9 @@ Route::delete('todo/{id}', [TodosController::class, 'destroy']);
 Route::resource('todos', Todos2Controller::class);
 // Route::get('todo','App\Http\Controllers\TodosController@index');
 
-Route::get('students', [StudentsModelController::class, 'index']);
-Route::post('students', [StudentsModelController::class, 'store']);
+Route::resource('students', StudentsModelController::class);
+// Route::get('students', [StudentsModelController::class, 'index']);
+// Route::post('students', [StudentsModelController::class, 'store']);
 
 Route::get('majors', [MajorController::class, 'index']);
 Route::post('majors', [MajorController::class, 'store']);

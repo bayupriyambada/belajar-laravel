@@ -52,9 +52,10 @@ class StudentsModelController extends Controller
      * @param  \App\Models\StudentsModel  $studentsModel
      * @return \Illuminate\Http\Response
      */
-    public function show(StudentsModel $studentsModel)
+    public function show($id)
     {
-        //
+
+        return StudentsModel::with(['major'])->find($id);
     }
 
     /**
